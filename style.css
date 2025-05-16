@@ -17,8 +17,8 @@ header{
 
 main h2{
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 1.2rem;
+    font-size: clamp(1rem , 14vw , 6rem);
+    margin-bottom: 0.7rem;
     color: rgb(150, 150, 150);
 }
 
@@ -27,6 +27,7 @@ main h2{
     flex-wrap: wrap;
     gap: 2rem;
     padding: 1rem 2rem;
+    justify-content: center;
 }
 
 .map-selection {
@@ -35,8 +36,7 @@ main h2{
     padding: 1.2rem 0.3rem 0.3rem 0.3rem;
     display: flex;
     flex-direction: column;
-    flex: 1 1 250px;
-    aspect-ratio: 2 / 1;
+    flex-basis: 200px;
     justify-content: center;
     align-items: center;
     color: rgb(150, 150, 150);
@@ -44,10 +44,20 @@ main h2{
 }
 
 .map-selection h1{
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.7rem;
 }
 
 .map-selection img{
     width: 100%;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 495px){
+    .map-selection{
+        flex-grow: 1;
+    }
+
+    .map-selection h1{
+        font-size: clamp(1rem , 7vw , 10vw);
+    }
+} 
