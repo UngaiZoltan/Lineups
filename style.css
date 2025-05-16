@@ -10,9 +10,12 @@ body{
 
 header{
     height: 150px;
-    background-color: #bebebe;
     margin-bottom: 1.2rem;
-    background-image: url(imagesformainpage/header.png);
+    background-color: #bbbbbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(2rem , 14vw , 6rem);
 }
 
 main h2{
@@ -41,6 +44,7 @@ main h2{
     align-items: center;
     color: rgb(150, 150, 150);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .map-selection h1{
@@ -61,3 +65,64 @@ main h2{
         font-size: clamp(1rem , 7vw , 10vw);
     }
 } 
+
+.window-smoke-from-t-spawn {
+    position: relative;
+    width: 90%;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.window-smoke-from-t-spawn > div {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    border: 2px solid white;
+    background-color: #808080;
+    transition: transform 0.6s ease-in-out;
+}
+
+.image-container {
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.tutorial-container {
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Kép animációja külön */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+    transition: transform 0.2s;
+}
+
+/* Aktív állapot: helycsere */
+.window-smoke-from-t-spawn.active .image-container {
+    transform: translateX(100%);
+    z-index: 2;
+}
+
+.window-smoke-from-t-spawn.active .tutorial-container {
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+.image-container:hover img{
+    transform: scale(2.5);
+}
