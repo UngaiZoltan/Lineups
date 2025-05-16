@@ -19,7 +19,7 @@
                 tutorial.textContent = "Aim here and jump throw";  // új szöveg
             } else {
                 image.src = "images/where-to-stand-mirage-smoke-lineup-from-t-spawn.png"; // vissza
-                tutorial.textContent = "tutorial"; // vissza
+                tutorial.textContent = "Stand here"; // vissza
             }
 
             // Visszaélénkülés
