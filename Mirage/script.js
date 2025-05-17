@@ -31,3 +31,18 @@
         }, 300); // 0.3s = halványítás ideje
     });
 
+// MÁSIK LINEUP
+
+function otherlineup(){
+    if(container.classList.contains("show")){
+        container.classList.remove("show");
+        container.classList.add("hidden");
+
+        
+    }
+
+    else{
+        container.classList.remove("hidden");
+        container.classList.add("show");
+    }
+}

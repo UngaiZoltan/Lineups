@@ -10,13 +10,30 @@
     <header>Mirage</header>
 
     <main>
-<div class="window-smoke-from-t-spawn" id="swapContainer">
+
+        <h2>Window smoke from T spawn</h2>
+
+<div class="window-smoke-from-t-spawn show" id="swapContainer">
+        <div class="image-container">
+            <img id="smokeImage" src="images/where-to-stand-mirage-smoke-lineup-from-t-spawn.png" alt="">
+        </div>
+        <div class="tutorial-container" id="tutorialText">Stand here</div>
+</div>
+
+<div class="window-smoke-from-mid hidden" id="swapContainer">
     <div class="image-container">
-        <img id="smokeImage" src="images/where-to-stand-mirage-smoke-lineup-from-t-spawn.png" alt="">
+        <img src="images/where-to-stand-mirage-stairs-lineup.png" alt="">
     </div>
     <div class="tutorial-container" id="tutorialText">Stand here</div>
 </div>
-    </main>
+
+<div class="btn-container"> 
+    <button onclick="otherlineup()">Previous</button>
+    <button onclick="otherlineup()">Next</button>
+</div>
+
+
+</main>
 
     <script src="script.js"></script>
 </body>

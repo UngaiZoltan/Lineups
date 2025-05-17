@@ -20,7 +20,7 @@ header{
 
 main h2{
     text-align: center;
-    font-size: clamp(1rem , 14vw , 6rem);
+    font-size: clamp(1rem , 7vw , 6rem);
     margin-bottom: 0.7rem;
     color: rgb(150, 150, 150);
 }
@@ -125,4 +125,27 @@ main h2{
 
 .image-container:hover img{
     transform: scale(2.5);
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: flex;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.btn-container button{
+    background-color: #4169e180;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
 }
